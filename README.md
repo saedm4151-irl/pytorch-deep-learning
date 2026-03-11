@@ -39,11 +39,11 @@ Previous repo: [neural-network-from-scratch](https://github.com/muhammedsaed/neu
 - [x] Autograd and computation graph
 - [x] Manual linear regression
 - [x] Real training loop with nn.Linear
-- [ ] Neural network with nn.Module ← currently here
-- [ ] Dataset and DataLoader
-- [ ] MNIST classification
-- [ ] Convolutional neural network
-- [ ] Save and load models
+- [x] Neural network with nn.Module ← currently here
+- [x] Dataset and DataLoader
+- [x] MNIST classification
+- [x] Convolutional neural network
+- [x] Save and load models
 
 ---
 
