@@ -22,7 +22,8 @@ Previous repo: [neural-network-from-scratch](https://github.com/muhammedsaed/neu
 | 8 | `8_dataloader.py` | Dataset and DataLoader — batching and shuffling |
 | 9 | `9_mnist_model.py` | First real NN on MNIST — classification, accuracy, softmax |
 | 10 | `10_cnn.py` | Convolutional neural network for image classification |
-| 11 | `11_save_load.py` | Save and load models with torch.save / torch.load |
+| 11 | `11_cnn.png` | Hand-drawn forward pass visualization of CNN Architecture |
+| 12 | `12_save_load.py` | Save and load models with torch.save / torch.load |
 
 ---
 
