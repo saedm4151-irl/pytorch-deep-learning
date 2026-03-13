@@ -36,11 +36,11 @@ st.write("Draw a digit below and the model will predict it.")
 
 canvas = st_canvas(
     fill_color="black",
-    stroke_width=18,
+    stroke_width=12,
     stroke_color="white",
     background_color="black",
-    height=400,
-    width=400,
+    height=280,
+    width=280,
     drawing_mode="freedraw",
     key="canvas"
 )
