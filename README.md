@@ -2,9 +2,11 @@
 
 Continuing from building a neural network from scratch using only NumPy,
 this repo documents my hands-on journey learning PyTorch — from tensors
-all the way to training real models on real datasets.
+all the way to training and deploying real models on real datasets.
 
 Previous repo: [neural-network-from-scratch](https://github.com/muhammedsaed/neural-network-from-scratch)
+
+Live demo: [MNIST Digit Recognizer](https://pytorch-mnist-model.streamlit.app)
 
 ---
 
@@ -27,8 +29,23 @@ Previous repo: [neural-network-from-scratch](https://github.com/muhammedsaed/neu
 | 13 | `13_full_model.py` | Complete model — training, validation, accuracy, save and load |
 | 14 | `14_full_model_architecture.png` | Architecture diagram of the full model |
 | — | `README.md` | Repository overview, file index, and learning roadmap |
-| — | `mnist_cnn.pth` | Saved weights for the MNIST CNN model |
+| — | `app.py` | Streamlit web app — drawable canvas, inference, confidence display |
+| — | `mnist_cnn.pth` | Saved weights for the MNIST CNN (~98% validation accuracy) |
 | — | `model.pth` | Saved weights for the simple regression model |
+| — | `requirements.txt` | Dependencies for Streamlit Cloud deployment |
+
+---
+
+## Live Demo
+
+A drawable digit recognizer built on top of the trained CNN.
+Draw any digit 0–9 on the canvas and the model returns a prediction with confidence scores for all 10 classes.
+
+Deployed on Streamlit Cloud: [pytorch-mnist-model.streamlit.app](https://pytorch-mnist-model.streamlit.app)
+
+Note: The model achieves ~98% accuracy on the MNIST test set but shows reduced accuracy on hand-drawn input.
+This is a known distribution gap — the model was trained on clean, centered MNIST digits and has not seen
+real handwriting styles. The fix is data augmentation during training, which is a planned next step.
 
 ---
 
@@ -39,19 +56,20 @@ Previous repo: [neural-network-from-scratch](https://github.com/muhammedsaed/neu
 - [x] Autograd and computation graph
 - [x] Manual linear regression
 - [x] Real training loop with nn.Linear
-- [x] Neural network with nn.Module ← currently here
+- [x] Neural network with nn.Module
 - [x] Dataset and DataLoader
 - [x] MNIST classification
 - [x] Convolutional neural network
 - [x] Save and load models
+- [x] Full training + validation loop with accuracy tracking
+- [x] Model deployment — live Streamlit app
 
 ---
 
 ## Roadmap Beyond This Repo
 
+- [ ] Data augmentation to improve real-world generalization
 - [ ] CBIR deep learning model for medical image retrieval (research project)
-- [ ] Computer vision pipeline for AI-powered Lost & Found system
-- [ ] Mini-batch SGD and advanced optimizers
 
 ---
 
@@ -68,6 +86,8 @@ and ongoing research on CBIR-based medical image retrieval with my professor.
 - Python 3
 - PyTorch
 - NumPy
+- Streamlit
+- PIL (Pillow)
 - PyCharm (virtual environment)
 
 ---
